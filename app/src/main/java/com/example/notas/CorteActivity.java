@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.notas.Entity.Promedio;
@@ -13,10 +15,8 @@ import java.util.ArrayList;
 
 public class CorteActivity extends AppCompatActivity {
 
-
-
     public static ArrayList<Promedio> promedios =new ArrayList<>();
-
+    Spinner Opciones;
 
 
     @Override
@@ -31,7 +31,9 @@ public class CorteActivity extends AppCompatActivity {
             System.out.println(pro.getNombreEstudiante());
         }
 
-
+        Opciones = (Spinner) findViewById(R.id.corteSpinner);
+        ArrayAdapter<CharSequence> adapter= ArrayAdapter.createFromResource(this,R.array.opciones,android.R.layout.simple_spinner_item);
+        Opciones.setAdapter(adapter);
     }
 
     public void obteniendoDatos() {
@@ -47,7 +49,9 @@ public class CorteActivity extends AppCompatActivity {
     }
 
     public void mandar(View view){
+        Intent intent = new Intent(this, MainActivity.class);
 
+        startActivity(intent);
 
 
     }
