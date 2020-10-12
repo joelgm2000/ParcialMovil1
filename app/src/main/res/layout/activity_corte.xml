@@ -138,7 +138,7 @@
             android:inputType="textPersonName"
             android:textSize="16dp" />
 
-        <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="196dp"
             android:orientation="vertical">
@@ -150,32 +150,22 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="15dp"
+
                 android:text="AGREGAR NOTA" />
 
-            <Button
-                android:id="@+id/btnAtras"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="255dp"
-                android:onClick="Atras"
-                android:text="Atras" />
-        </LinearLayout>
-
-
-
     <Button
-        android:id="@+id/BtnRegresar"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnAtras"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="272dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="255dp"
 
         android:onClick="mandar"
-        android:text="regresar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TxtMensaje" />
+        android:text="Atras" />
+
+
+
 </LinearLayout>
 
 

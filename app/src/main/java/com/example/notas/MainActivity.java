@@ -267,5 +267,49 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void BorraUno(View view) {
+
+        stringPromedio="";
+
+        TxtIdPromedio=findViewById(R.id.TxtIdPromedio);
+        stringPromedio=TxtIdPromedio.getText().toString();
+
+        if(stringPromedio.equals("")){
+            Log.d("Prueba","debe digitar la id a eliminar");
+        }else{
+
+            listadoPromedios.clear();
+            listadoPromedios = serviceArchivos.verPromedios("Promedios",getApplicationContext());
+
+            int lugar = buscar() - 1;
+
+            listadoPromedios.remove(lugar);
+            serviceArchivos.agregar(listadoPromedios, "Promedios",getApplicationContext());
+
+            listMapear();
+        }
+
+    }
+
+    private int buscar(){
+
+        stringPromedio="";
+
+        TxtIdPromedio=findViewById(R.id.TxtIdPromedio);
+        stringPromedio=TxtIdPromedio.getText().toString();
+
+        int index=0;
+
+        for (Promedio pro:listadoPromedios){
+
+            index++;
+
+            if(pro.getIdPonderado().equals(stringPromedio)){
+                return index;
+            }
+        }
+        return 0;
+    }
+
 
 }
