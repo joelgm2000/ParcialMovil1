@@ -48,7 +48,7 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="NOMBRE MATERIA"
+            android:text="NOMBRE ALUMNO"
             android:textAlignment="center"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="161dp" />
@@ -71,10 +71,10 @@
 
         <Button
             android:id="@+id/BtnBuscar"
-            android:layout_width="103dp"
-            android:layout_height="47dp"
-            android:layout_marginEnd="52dp"
-            android:layout_marginBottom="64dp"
+            android:layout_width="119dp"
+            android:layout_height="73dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="4dp"
             android:onClick="llenarCorte"
 
             android:text="CALIFICAR"
@@ -86,7 +86,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="52dp"
-            android:layout_marginBottom="64dp"
+            android:layout_marginBottom="92dp"
             android:onClick="agregarPromedio"
             android:text="AÑADIR"
 
@@ -95,15 +95,16 @@
 
         <Button
             android:id="@+id/BtnBorrar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="227dp"
+            android:layout_height="77dp"
             android:onClick="borrarTodo"
             android:text="BORRAR TODA INFORMACION DE LA  TABLA"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.086"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.975" />
 
         <Button
             android:id="@+id/btnEliminar"
@@ -113,10 +114,23 @@
             android:text="Eliminar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.467"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.418" />
+            app:layout_constraintVertical_bias="0.163" />
+
+        <Button
+            android:id="@+id/BtnActualizar"
+            android:layout_width="125dp"
+            android:layout_height="47dp"
+            android:onClick="Modificar"
+            android:text="actualizar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.919"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.171" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
